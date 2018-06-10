@@ -1,0 +1,778 @@
+21:40:09.779 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:+HeapDumpOnOutOfMemoryError, -Xmx1024m, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+21:40:10.230 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=390fedeb-9d52-4fc7-b6fa-84e62faf3986,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/app/cache/daemon,pid=37,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+21:40:10.327 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+21:40:10.336 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+21:40:10.343 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
+21:40:10.352 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.20.0.3
+21:40:10.366 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
+21:40:10.375 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+21:40:10.381 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+21:40:10.386 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
+21:40:10.392 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+21:40:10.403 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [f1839c2e-4d63-4a69-bc63-4aeac74a8834 port:39943, addresses:[/127.0.0.1]].
+21:40:10.421 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Sat Jun 09 21:40:10 GMT 2018, with address: [f1839c2e-4d63-4a69-bc63-4aeac74a8834 port:39943, addresses:[/127.0.0.1]]
+21:40:10.428 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [f1839c2e-4d63-4a69-bc63-4aeac74a8834 port:39943, addresses:[/127.0.0.1]]
+21:40:10.435 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=390fedeb-9d52-4fc7-b6fa-84e62faf3986,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/app/cache/daemon,pid=37,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+21:40:10.441 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [f1839c2e-4d63-4a69-bc63-4aeac74a8834 port:39943, addresses:[/127.0.0.1]], context: DefaultDaemonContext[uid=390fedeb-9d52-4fc7-b6fa-84e62faf3986,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/app/cache/daemon,pid=37,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+21:40:10.482 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+21:40:10.496 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+21:40:10.528 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+21:40:10.535 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+21:40:10.542 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+21:40:10.579 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+21:40:10.587 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+21:40:10.591 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:57096 to /127.0.0.1:39943.
+21:40:10.592 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+21:40:10.853 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.Build
+21:40:10.867 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received non-IO message from client: Build{id=d62fc294-b5b7-4164-a5f9-8d0b61a1fe14.1, currentDir=/app}
+21:40:10.873 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=d62fc294-b5b7-4164-a5f9-8d0b61a1fe14.1, currentDir=/app}.
+21:40:10.880 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=d62fc294-b5b7-4164-a5f9-8d0b61a1fe14.1, currentDir=/app} with connection: socket connection from /127.0.0.1:39943 to /127.0.0.1:57096.
+21:40:10.893 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=d62fc294-b5b7-4164-a5f9-8d0b61a1fe14.1, currentDir=/app}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:39943 to /127.0.0.1:57096] after 0.0 minutes of idle
+21:40:10.898 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [f1839c2e-4d63-4a69-bc63-4aeac74a8834 port:39943, addresses:[/127.0.0.1]]
+21:40:10.901 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [f1839c2e-4d63-4a69-bc63-4aeac74a8834 port:39943, addresses:[/127.0.0.1]]
+21:40:10.920 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+21:40:10.925 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+21:40:10.940 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+21:40:10.944 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+21:40:10.948 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=d62fc294-b5b7-4164-a5f9-8d0b61a1fe14.1, currentDir=/app}. Dispatching build started information...
+21:40:10.949 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+21:40:10.953 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+21:40:10.974 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jdk/bin, JAVA_JCE=unlimited, SPRING_PROFILES_ACTIVE=dev, JAVA_HOME=/opt/jdk, OLDPWD=/app, GLIBC_VERSION=2.27-r0, LANG=C.UTF-8, JAVA_VERSION_MAJOR=8, GRADLE_USER_HOME=cache, HOSTNAME=295cb1114ec9, GLIBC_REPO=https://github.com/sgerrand/alpine-pkg-glibc, JAVA_VERSION_MINOR=172, PWD=/app, JAVA_PACKAGE=jdk, JAVA_VERSION_BUILD=11, HOME=/root, SHLVL=1}
+21:40:11.004 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.CloseInput
+21:40:11.008 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@d570322
+21:40:11.009 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+21:40:11.015 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 37). The daemon log file: /app/cache/daemon/4.5.1/daemon-37.out.log
+21:40:11.022 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 954.7 MB]
+21:40:11.027 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] Closing daemon's stdin at end of input.
+21:40:11.037 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+21:40:11.042 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=390fedeb-9d52-4fc7-b6fa-84e62faf3986,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/app/cache/daemon,pid=37,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+21:40:11.039 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] The daemon will no longer process any standard input.
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-gradle-plugin/2.0.0.RELEASE/spring-boot-gradle-plugin-2.0.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-tools/2.0.0.RELEASE/spring-boot-tools-2.0.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-parent/2.0.0.RELEASE/spring-boot-parent-2.0.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/2.0.0.RELEASE/spring-boot-dependencies-2.0.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.9.4/jackson-bom-2.9.4.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.9.1/jackson-parent-2.9.1.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/30/oss-parent-30.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.22.Final/netty-bom-4.1.22.Final.pom
+Download https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+Download https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/Bismuth-SR7/reactor-bom-Bismuth-SR7.pom
+Download https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.10.0/log4j-bom-2.10.0.pom
+Download https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/1/logging-parent-1.pom
+Download https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+Download https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/9.4.8.v20171121/jetty-bom-9.4.8.v20171121.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.0.4.RELEASE/spring-framework-bom-5.0.4.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-releasetrain/Kay-SR5/spring-data-releasetrain-Kay-SR5.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/data/build/spring-data-build/2.0.5.RELEASE/spring-data-build-2.0.5.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/5.0.3.RELEASE/spring-integration-bom-5.0.3.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/5.0.3.RELEASE/spring-security-bom-5.0.3.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/Apple-SR1/spring-session-bom-Apple-SR1.pom
+Download https://repo.maven.apache.org/maven2/io/spring/gradle/dependency-management-plugin/1.0.4.RELEASE/dependency-management-plugin-1.0.4.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.14/commons-compress-1.14.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/2.0.0.RELEASE/spring-boot-loader-tools-2.0.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-core/5.0.4.RELEASE/spring-core-5.0.4.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/Bismuth-SR6/reactor-bom-Bismuth-SR6.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.21.Final/netty-bom-4.1.21.Final.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/5.0.4.RELEASE/spring-jcl-5.0.4.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/io/spring/gradle/dependency-management-plugin/1.0.4.RELEASE/dependency-management-plugin-1.0.4.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/2.0.0.RELEASE/spring-boot-loader-tools-2.0.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-gradle-plugin/2.0.0.RELEASE/spring-boot-gradle-plugin-2.0.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.14/commons-compress-1.14.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/5.0.4.RELEASE/spring-jcl-5.0.4.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-core/5.0.4.RELEASE/spring-core-5.0.4.RELEASE.jar
+:compileJava
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix/1.4.0.RELEASE/spring-cloud-netflix-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/1.3.6.RELEASE/spring-cloud-build-1.3.6.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/1.3.6.RELEASE/spring-cloud-build-dependencies-1.3.6.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/1.5.8.RELEASE/spring-boot-dependencies-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.8.10/jackson-bom-2.8.10.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.8/jackson-parent-2.8.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/27/oss-parent-27.pom
+Download https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.7/log4j-bom-2.7.pom
+Download https://repo.maven.apache.org/maven2/org/apache/apache/9/apache-9.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/4.3.12.RELEASE/spring-framework-bom-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-releasetrain/Ingalls-SR8/spring-data-releasetrain-Ingalls-SR8.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/data/build/spring-data-build/1.9.8.RELEASE/spring-data-build-1.9.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/4.3.12.RELEASE/spring-integration-bom-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/4.2.3.RELEASE/spring-security-bom-4.2.3.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-dependencies/1.4.0.RELEASE/spring-cloud-netflix-dependencies-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies-parent/1.3.6.RELEASE/spring-cloud-dependencies-parent-1.3.6.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons-dependencies/1.3.0.RELEASE/spring-cloud-commons-dependencies-1.3.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-config-dependencies/1.4.0.RELEASE/spring-cloud-config-dependencies-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-stream-dependencies/Ditmars.RELEASE/spring-cloud-stream-dependencies-Ditmars.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies-parent/1.3.5.RELEASE/spring-cloud-dependencies-parent-1.3.5.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-contract-dependencies/1.1.2.RELEASE/spring-cloud-contract-dependencies-1.1.2.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dependencies-parent/1.3.3.RELEASE/spring-cloud-dependencies-parent-1.3.3.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-eureka/1.4.0.RELEASE/spring-cloud-starter-eureka-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-zuul/1.4.0.RELEASE/spring-cloud-starter-zuul-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-zuul/1.4.0.RELEASE/spring-cloud-starter-netflix-zuul-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix/1.4.0.RELEASE/spring-cloud-starter-netflix-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/1.4.0.RELEASE/spring-cloud-starter-netflix-eureka-client-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-hystrix/1.4.0.RELEASE/spring-cloud-starter-netflix-hystrix-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/1.5.8.RELEASE/spring-boot-starter-actuator-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/1.5.8.RELEASE/spring-boot-starter-web-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter/1.3.0.RELEASE/spring-cloud-starter-1.3.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starters/1.5.8.RELEASE/spring-boot-starters-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons-parent/1.3.0.RELEASE/spring-cloud-commons-parent-1.3.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-parent/1.5.8.RELEASE/spring-boot-parent-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-archaius/1.4.0.RELEASE/spring-cloud-starter-netflix-archaius-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/1.4.0.RELEASE/spring-cloud-starter-netflix-ribbon-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-eureka-client/1.4.0.RELEASE/spring-cloud-netflix-eureka-client-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-core/1.4.0.RELEASE/spring-cloud-netflix-core-1.4.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0.pom
+Download https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-eureka/2.2.4/ribbon-eureka-2.2.4.pom
+Download https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.9/xstream-parent-1.4.9.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/1.5.8.RELEASE/spring-boot-starter-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-rsa/1.0.3.RELEASE/spring-security-rsa-1.0.3.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons/1.3.0.RELEASE/spring-cloud-commons-1.3.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-context/1.3.0.RELEASE/spring-cloud-context-1.3.0.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/5.3.5.Final/hibernate-validator-5.3.5.Final.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.12.RELEASE/spring-web-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.3.12.RELEASE/spring-webmvc-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/1.5.8.RELEASE/spring-boot-starter-tomcat-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.10/jackson-databind-2.8.10.pom
+Download https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator-parent/5.3.5.Final/hibernate-validator-parent-5.3.5.Final.pom
+Download https://repo.maven.apache.org/maven2/org/jboss/arquillian/arquillian-bom/1.1.11.Final/arquillian-bom-1.1.11.Final.pom
+Download https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/shrinkwrap-bom/1.2.3/shrinkwrap-bom-1.2.3.pom
+Download https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/resolver/shrinkwrap-resolver-bom/2.2.0/shrinkwrap-resolver-bom-2.2.0.pom
+Download https://repo.maven.apache.org/maven2/org/jboss/shrinkwrap/descriptors/shrinkwrap-descriptors-bom/2.0.0-alpha-8/shrinkwrap-descriptors-bom-2.0.0-alpha-8.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/1.5.8.RELEASE/spring-boot-actuator-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/hystrix/hystrix-javanica/1.5.12/hystrix-javanica-1.5.12.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/hystrix/hystrix-metrics-event-stream/1.5.12/hystrix-metrics-event-stream-1.5.12.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/hystrix/hystrix-core/1.5.12/hystrix-core-1.5.12.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon/2.2.4/ribbon-2.2.4.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-loadbalancer/2.2.4/ribbon-loadbalancer-2.2.4.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-core/2.2.4/ribbon-core-2.2.4.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-httpclient/2.2.4/ribbon-httpclient-2.2.4.pom
+Download https://repo.maven.apache.org/maven2/io/reactivex/rxjava/1.2.0/rxjava-1.2.0.pom
+Download https://repo.maven.apache.org/maven2/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/archaius/archaius-core/0.7.4/archaius-core-0.7.4.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.10/jackson-core-2.8.10.pom
+Download https://repo.maven.apache.org/maven2/com/google/guava/guava/18.0/guava-18.0.pom
+Download https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/18.0/guava-parent-18.0.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/23/commons-parent-23.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.pom
+Download https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/servo/servo-core/0.10.1/servo-core-0.10.1.pom
+Download https://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/netflix-commons/netflix-commons-util/0.1.1/netflix-commons-util-0.1.1.pom
+Download https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/25/commons-parent-25.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/1.5.8.RELEASE/spring-boot-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/1.5.8.RELEASE/spring-boot-autoconfigure-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.pom
+Download https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.pom
+Download https://repo.maven.apache.org/maven2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.pom
+Download https://repo.maven.apache.org/maven2/org/codehaus/codehaus-parent/3/codehaus-parent-3.pom
+Download https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-project/1.19.1/jersey-project-1.19.1.pom
+Download https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.pom
+Download https://repo.maven.apache.org/maven2/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.pom
+Download https://repo.maven.apache.org/maven2/net/java/jvnet-parent/4/jvnet-parent-4.pom
+Download https://repo.maven.apache.org/maven2/com/sun/jersey/contribs/jersey-contribs/1.19.1/jersey-contribs-1.19.1.pom
+Download https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-client/4.5.3/httpcomponents-client-4.5.3.pom
+Download https://repo.maven.apache.org/maven2/com/google/inject/guice/4.1.0/guice-4.1.0.pom
+Download https://repo.maven.apache.org/maven2/org/apache/httpcomponents/project/7/project-7.pom
+Download https://repo.maven.apache.org/maven2/com/google/inject/guice-parent/4.1.0/guice-parent-4.1.0.pom
+Download https://repo.maven.apache.org/maven2/com/google/google/5/google-5.pom
+Download https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.pom
+Download https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom
+Download https://repo.maven.apache.org/maven2/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.pom
+Download https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom
+Download https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom
+Download https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.17/snakeyaml-1.17.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/1.5.8.RELEASE/spring-boot-starter-logging-1.5.8.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.3.12.RELEASE/spring-core-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/4.2.3.RELEASE/spring-security-crypto-4.2.3.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/4.3.9.RELEASE/spring-framework-bom-4.3.9.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk15on/1.55/bcpkix-jdk15on-1.55.pom
+Download https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.23/tomcat-embed-websocket-8.5.23.pom
+Download https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/8.5.23/tomcat-embed-core-8.5.23.pom
+Download https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/8.5.23/tomcat-embed-el-8.5.23.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.3.4/classmate-1.3.4.pom
+Download https://repo.maven.apache.org/maven2/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.pom
+Download https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.3.1.Final/jboss-logging-3.3.1.Final.pom
+Download https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/15/jboss-parent-15.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/24/oss-parent-24.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.3.12.RELEASE/spring-context-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.3.12.RELEASE/spring-beans-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.3.12.RELEASE/spring-aop-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.3.12.RELEASE/spring-expression-4.3.12.RELEASE.pom
+Download https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/hystrix/hystrix-serialization/1.5.12/hystrix-serialization-1.5.12.pom
+Download https://repo.maven.apache.org/maven2/org/ow2/asm/asm/5.0.4/asm-5.0.4.pom
+Download https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.8.11/aspectjweaver-1.8.11.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.pom
+Download https://repo.maven.apache.org/maven2/org/ow2/asm/asm-parent/5.0.4/asm-parent-5.0.4.pom
+Download https://repo.maven.apache.org/maven2/org/ow2/ow2/1.3/ow2-1.3.pom
+Download https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom
+Download https://repo.maven.apache.org/maven2/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-transport/2.2.4/ribbon-transport-2.2.4.pom
+Download https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.pom
+Download https://repo.maven.apache.org/maven2/com/google/code/findbugs/annotations/2.0.0/annotations-2.0.0.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/17/commons-parent-17.pom
+Download https://repo.maven.apache.org/maven2/org/apache/apache/7/apache-7.pom
+Download https://repo.maven.apache.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/39/commons-parent-39.pom
+Download https://repo.maven.apache.org/maven2/org/apache/apache/16/apache-16.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.pom
+Download https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.pom
+Download https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/5/commons-parent-5.pom
+Download https://repo.maven.apache.org/maven2/org/apache/apache/4/apache-4.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/servo/servo-internal/0.10.1/servo-internal-0.10.1.pom
+Download https://repo.maven.apache.org/maven2/stax/stax-api/1.0.1/stax-api-1.0.1.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-math/2.2/commons-math-2.2.pom
+Download https://repo.maven.apache.org/maven2/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/18/commons-parent-18.pom
+Download https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.8/httpcore-4.4.8.pom
+Download https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom
+Download https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-core/4.4.8/httpcomponents-core-4.4.8.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/35/commons-parent-35.pom
+Download https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-parent/9/httpcomponents-parent-9.pom
+Download https://repo.maven.apache.org/maven2/org/apache/apache/15/apache-15.pom
+Download https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom
+Download https://repo.maven.apache.org/maven2/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.pom
+Download https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.pom
+Download https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.pom
+Download https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.pom
+Download https://repo.maven.apache.org/maven2/org/slf4j/log4j-over-slf4j/1.7.25/log4j-over-slf4j-1.7.25.pom
+Download https://repo.maven.apache.org/maven2/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.pom
+Download https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.1.11/logback-parent-1.1.11.pom
+Download https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk15on/1.55/bcprov-jdk15on-1.55.pom
+Download https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-annotations-api/8.5.23/tomcat-annotations-api-8.5.23.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-afterburner/2.8.10/jackson-module-afterburner-2.8.10.pom
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-modules-base/2.8.10/jackson-modules-base-2.8.10.pom
+Download https://repo.maven.apache.org/maven2/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.pom
+Download https://repo.maven.apache.org/maven2/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.0.27.Final/netty-codec-http-4.0.27.Final.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-epoll/4.0.27.Final/netty-transport-native-epoll-4.0.27.Final.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.0.27.Final/netty-parent-4.0.27.Final.pom
+Download https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom
+Download https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.pom
+Download https://repo.maven.apache.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9.pom
+Download https://repo.maven.apache.org/maven2/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.pom
+Download https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.2/gson-2.8.2.pom
+Download https://repo.maven.apache.org/maven2/org/antlr/antlr-master/3.4/antlr-master-3.4.pom
+Download https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.8.2/gson-parent-2.8.2.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/11/commons-parent-11.pom
+Download https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.22.Final/netty-codec-4.1.22.Final.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.22.Final/netty-handler-4.1.22.Final.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-parent/4.1.22.Final/netty-parent-4.1.22.Final.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.22.Final/netty-buffer-4.1.22.Final.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.22.Final/netty-common-4.1.22.Final.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.22.Final/netty-transport-4.1.22.Final.pom
+Download https://repo.maven.apache.org/maven2/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.pom
+Download https://repo.maven.apache.org/maven2/antlr/antlr/2.7.7/antlr-2.7.7.pom
+Download https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.22.Final/netty-resolver-4.1.22.Final.pom
+Download https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/34/commons-parent-34.pom
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/1.4.0.RELEASE/spring-cloud-starter-netflix-eureka-client-1.4.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-eureka/1.4.0.RELEASE/spring-cloud-starter-eureka-1.4.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-zuul/1.4.0.RELEASE/spring-cloud-starter-zuul-1.4.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-zuul/1.4.0.RELEASE/spring-cloud-starter-netflix-zuul-1.4.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-archaius/1.4.0.RELEASE/spring-cloud-starter-netflix-archaius-1.4.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter/1.3.0.RELEASE/spring-cloud-starter-1.3.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/1.5.8.RELEASE/spring-boot-starter-web-1.5.8.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-ribbon/1.4.0.RELEASE/spring-cloud-starter-netflix-ribbon-1.4.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-actuator/1.5.8.RELEASE/spring-boot-starter-actuator-1.5.8.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/zuul/zuul-core/1.3.0/zuul-core-1.3.0.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-eureka-client/1.4.0.RELEASE/spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix-core/1.4.0.RELEASE/spring-cloud-netflix-core-1.4.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/eureka/eureka-core/1.7.0/eureka-core-1.7.0.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-eureka/2.2.4/ribbon-eureka-2.2.4.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/eureka/eureka-client/1.7.0/eureka-client-1.7.0.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/1.5.8.RELEASE/spring-boot-starter-1.5.8.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-context/1.3.0.RELEASE/spring-cloud-context-1.3.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-commons/1.3.0.RELEASE/spring-cloud-commons-1.3.0.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-rsa/1.0.3.RELEASE/spring-security-rsa-1.0.3.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/1.5.8.RELEASE/spring-boot-starter-tomcat-1.5.8.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/hibernate/hibernate-validator/5.3.5.Final/hibernate-validator-5.3.5.Final.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-actuator/1.5.8.RELEASE/spring-boot-actuator-1.5.8.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/hystrix/hystrix-metrics-event-stream/1.5.12/hystrix-metrics-event-stream-1.5.12.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/hystrix/hystrix-javanica/1.5.12/hystrix-javanica-1.5.12.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon/2.2.4/ribbon-2.2.4.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/hystrix/hystrix-serialization/1.5.12/hystrix-serialization-1.5.12.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/hystrix/hystrix-core/1.5.12/hystrix-core-1.5.12.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-transport/2.2.4/ribbon-transport-2.2.4.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-httpclient/2.2.4/ribbon-httpclient-2.2.4.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-loadbalancer/2.2.4/ribbon-loadbalancer-2.2.4.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/ribbon/ribbon-core/2.2.4/ribbon-core-2.2.4.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/netflix-commons/netflix-eventbus/0.3.0/netflix-eventbus-0.3.0.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/archaius/archaius-core/0.7.4/archaius-core-0.7.4.jar
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-afterburner/2.8.10/jackson-module-afterburner-2.8.10.jar
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.10/jackson-databind-2.8.10.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/4.3.12.RELEASE/spring-webmvc-4.3.12.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-web/4.3.12.RELEASE/spring-web-4.3.12.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/io/reactivex/rxnetty-contexts/0.4.9/rxnetty-contexts-0.4.9.jar
+Download https://repo.maven.apache.org/maven2/io/reactivex/rxnetty-servo/0.4.9/rxnetty-servo-0.4.9.jar
+Download https://repo.maven.apache.org/maven2/io/reactivex/rxnetty/0.4.9/rxnetty-0.4.9.jar
+Download https://repo.maven.apache.org/maven2/io/reactivex/rxjava/1.2.0/rxjava-1.2.0.jar
+Download https://repo.maven.apache.org/maven2/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar
+Download https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.10/jackson-core-2.8.10.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/servo/servo-core/0.10.1/servo-core-0.10.1.jar
+Download https://repo.maven.apache.org/maven2/com/google/inject/guice/4.1.0/guice-4.1.0.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/netflix-commons/netflix-infix/0.3.0/netflix-infix-0.3.0.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/servo/servo-internal/0.10.1/servo-internal-0.10.1.jar
+Download https://repo.maven.apache.org/maven2/com/google/guava/guava/18.0/guava-18.0.jar
+Download https://repo.maven.apache.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/netflix-commons/netflix-commons-util/0.1.1/netflix-commons-util-0.1.1.jar
+Download https://repo.maven.apache.org/maven2/com/netflix/netflix-commons/netflix-statistics/0.1.1/netflix-statistics-0.1.1.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/1.5.8.RELEASE/spring-boot-starter-logging-1.5.8.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar
+Download https://repo.maven.apache.org/maven2/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar
+Download https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar
+Download https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar
+Download https://repo.maven.apache.org/maven2/org/slf4j/log4j-over-slf4j/1.7.25/log4j-over-slf4j-1.7.25.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/1.5.8.RELEASE/spring-boot-autoconfigure-1.5.8.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/com/sun/jersey/contribs/jersey-apache-client4/1.19.1/jersey-apache-client4-1.19.1.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/1.5.8.RELEASE/spring-boot-1.5.8.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/codehaus/jettison/jettison/1.3.7/jettison-1.3.7.jar
+Download https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-client/1.19.1/jersey-client-1.19.1.jar
+Download https://repo.maven.apache.org/maven2/com/sun/jersey/jersey-core/1.19.1/jersey-core-1.19.1.jar
+Download https://repo.maven.apache.org/maven2/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar
+Download https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+Download https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+Download https://repo.maven.apache.org/maven2/org/codehaus/woodstox/woodstox-core-asl/4.4.1/woodstox-core-asl-4.4.1.jar
+Download https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-aop/4.3.12.RELEASE/spring-aop-4.3.12.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-context/4.3.12.RELEASE/spring-context-4.3.12.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-beans/4.3.12.RELEASE/spring-beans-4.3.12.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-expression/4.3.12.RELEASE/spring-expression-4.3.12.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/spring-core/4.3.12.RELEASE/spring-core-4.3.12.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-crypto/4.2.3.RELEASE/spring-security-crypto-4.2.3.RELEASE.jar
+Download https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar
+Download https://repo.maven.apache.org/maven2/org/bouncycastle/bcpkix-jdk15on/1.55/bcpkix-jdk15on-1.55.jar
+Download https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.23/tomcat-embed-websocket-8.5.23.jar
+Download https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/8.5.23/tomcat-embed-core-8.5.23.jar
+Download https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/8.5.23/tomcat-embed-el-8.5.23.jar
+Download https://repo.maven.apache.org/maven2/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar
+Download https://repo.maven.apache.org/maven2/org/jboss/logging/jboss-logging/3.3.1.Final/jboss-logging-3.3.1.Final.jar
+Download https://repo.maven.apache.org/maven2/org/hdrhistogram/HdrHistogram/2.1.9/HdrHistogram-2.1.9.jar
+Download https://repo.maven.apache.org/maven2/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar
+Download https://repo.maven.apache.org/maven2/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar
+Download https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+Download https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar
+Download https://repo.maven.apache.org/maven2/org/aspectj/aspectjweaver/1.8.11/aspectjweaver-1.8.11.jar
+Download https://repo.maven.apache.org/maven2/stax/stax-api/1.0.1/stax-api-1.0.1.jar
+Download https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar
+Download https://repo.maven.apache.org/maven2/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar
+Download https://repo.maven.apache.org/maven2/org/apache/commons/commons-math/2.2/commons-math-2.2.jar
+Download https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.8/httpcore-4.4.8.jar
+Download https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+Download https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+Download https://repo.maven.apache.org/maven2/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar
+Download https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-annotations-api/8.5.23/tomcat-annotations-api-8.5.23.jar
+Download https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/3.1.4/stax2-api-3.1.4.jar
+Download https://repo.maven.apache.org/maven2/org/bouncycastle/bcprov-jdk15on/1.55/bcprov-jdk15on-1.55.jar
+Download https://repo.maven.apache.org/maven2/io/netty/netty-codec-http/4.0.27.Final/netty-codec-http-4.0.27.Final.jar
+Download https://repo.maven.apache.org/maven2/io/netty/netty-transport-native-epoll/4.0.27.Final/netty-transport-native-epoll-4.0.27.Final.jar
+Download https://repo.maven.apache.org/maven2/commons-jxpath/commons-jxpath/1.3/commons-jxpath-1.3.jar
+Download https://repo.maven.apache.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9.jar
+Download https://repo.maven.apache.org/maven2/org/antlr/antlr-runtime/3.4/antlr-runtime-3.4.jar
+Download https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar
+Download https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar
+Download https://repo.maven.apache.org/maven2/io/netty/netty-handler/4.1.22.Final/netty-handler-4.1.22.Final.jar
+Download https://repo.maven.apache.org/maven2/io/netty/netty-buffer/4.1.22.Final/netty-buffer-4.1.22.Final.jar
+Download https://repo.maven.apache.org/maven2/io/netty/netty-codec/4.1.22.Final/netty-codec-4.1.22.Final.jar
+Download https://repo.maven.apache.org/maven2/io/netty/netty-transport/4.1.22.Final/netty-transport-4.1.22.Final.jar
+Download https://repo.maven.apache.org/maven2/io/netty/netty-resolver/4.1.22.Final/netty-resolver-4.1.22.Final.jar
+Download https://repo.maven.apache.org/maven2/io/netty/netty-common/4.1.22.Final/netty-common-4.1.22.Final.jar
+Download https://repo.maven.apache.org/maven2/antlr/antlr/2.7.7/antlr-2.7.7.jar
+Download https://repo.maven.apache.org/maven2/org/antlr/stringtemplate/3.2.1/stringtemplate-3.2.1.jar
+Download https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-hystrix/1.4.0.RELEASE/spring-cloud-starter-netflix-hystrix-1.4.0.RELEASE.jar
+:processResources
+:classes
+:bootRun
+2018-06-09 21:41:50.899  INFO 81 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@21de60b4: startup date [Sat Jun 09 21:41:50 GMT 2018]; root of context hierarchy
+2018-06-09 21:41:52.912  INFO 81 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-06-09 21:41:53.200  INFO 81 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$db6684ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m      [2m (v1.5.8.RELEASE)[0;39m
+
+[2m2018-06-09 21:41:54.880[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.apigateway.ZuulGatewayApplication   [0;39m [2m:[0;39m The following profiles are active: dev
+[2m2018-06-09 21:41:54.934[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29ca3d04: startup date [Sat Jun 09 21:41:54 GMT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@21de60b4
+[2m2018-06-09 21:41:58.242[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.f.s.DefaultListableBeanFactory    [0;39m [2m:[0;39m Overriding bean definition for bean 'counterFactory' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration$ZuulMetricsConfiguration; factoryMethodName=counterFactory; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration$ZuulMetricsConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.netflix.zuul.ZuulServerAutoConfiguration$ZuulCounterFactoryConfiguration; factoryMethodName=counterFactory; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/netflix/zuul/ZuulServerAutoConfiguration$ZuulCounterFactoryConfiguration.class]]
+[2m2018-06-09 21:41:59.061[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=0b8c75a2-4170-3528-8322-bed24cdeb164
+[2m2018-06-09 21:41:59.100[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor[0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2m2018-06-09 21:41:59.811[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$f1792831] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-06-09 21:42:00.561[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$db6684ed] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-06-09 21:42:02.469[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat initialized with port(s): 8080 (http)
+[2m2018-06-09 21:42:02.502[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2018-06-09 21:42:02.504[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.5.23
+[2m2018-06-09 21:42:04.764[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2018-06-09 21:42:04.766[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 9831 ms
+[2m2018-06-09 21:42:09.863[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.ServletRegistrationBean [0;39m [2m:[0;39m Mapping servlet: 'dispatcherServlet' to [/]
+[2m2018-06-09 21:42:09.878[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.ServletRegistrationBean [0;39m [2m:[0;39m Mapping servlet: 'zuulServlet' to [/zuul/*]
+[2m2018-06-09 21:42:09.899[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'metricsFilter' to: [/*]
+[2m2018-06-09 21:42:09.900[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2018-06-09 21:42:09.901[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2018-06-09 21:42:09.901[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2018-06-09 21:42:09.901[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2018-06-09 21:42:09.901[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[2m2018-06-09 21:42:09.901[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'applicationContextIdFilter' to: [/*]
+[2m2018-06-09 21:42:10.768[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2018-06-09 21:42:10.769[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2018-06-09 21:42:10.835[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.netflix.config.DynamicPropertyFactory [0;39m [2m:[0;39m DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1aad0b1
+[2m2018-06-09 21:42:13.451[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2018-06-09 21:42:13.452[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2018-06-09 21:42:15.376[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerAdapter[0;39m [2m:[0;39m Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@29ca3d04: startup date [Sat Jun 09 21:41:54 GMT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@21de60b4
+[2m2018-06-09 21:42:16.799[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2m2018-06-09 21:42:16.807[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2m2018-06-09 21:42:17.039[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2018-06-09 21:42:17.039[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2018-06-09 21:42:17.292[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2018-06-09 21:42:20.562[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[2m2018-06-09 21:42:20.566[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/routes || /routes.json],methods=[GET],params=[format],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.cloud.netflix.zuul.RoutesMvcEndpoint.invokeRouteDetails(java.lang.String)
+[2m2018-06-09 21:42:20.566[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/routes || /routes.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.netflix.zuul.RoutesMvcEndpoint.reset()
+[2m2018-06-09 21:42:20.566[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/routes || /routes.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.570[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[2m2018-06-09 21:42:20.570[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[2m2018-06-09 21:42:20.570[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.571[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+[2m2018-06-09 21:42:20.574[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.574[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.577[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[2m2018-06-09 21:42:20.577[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.579[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[2m2018-06-09 21:42:20.579[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.579[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.580[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/hystrix.stream/**]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.cloud.netflix.endpoint.ServletWrappingEndpoint.handle(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+[2m2018-06-09 21:42:20.580[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.581[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+[2m2018-06-09 21:42:20.581[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+[2m2018-06-09 21:42:20.581[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[2m2018-06-09 21:42:20.582[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.582[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.582[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+[2m2018-06-09 21:42:20.583[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+[2m2018-06-09 21:42:20.583[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/filters || /filters.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.584[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.584[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.584[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-09 21:42:20.585[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[2m2018-06-09 21:42:22.234[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.n.zuul.ZuulFilterInitializer      [0;39m [2m:[0;39m Starting filter initializer
+[2m2018-06-09 21:42:22.290[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36marterDeprecationWarningAutoConfiguration[0;39m [2m:[0;39m spring-cloud-starter-eureka is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka
+[2m2018-06-09 21:42:22.362[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Registering beans for JMX exposure on startup
+[2m2018-06-09 21:42:22.383[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'environmentManager' has been autodetected for JMX exposure
+[2m2018-06-09 21:42:22.386[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+[2m2018-06-09 21:42:22.387[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+[2m2018-06-09 21:42:22.389[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+[2m2018-06-09 21:42:22.390[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'routesEndpoint' has been autodetected for JMX exposure
+[2m2018-06-09 21:42:22.392[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'routesMvcEndpoint' has been autodetected for JMX exposure
+[2m2018-06-09 21:42:22.393[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'filtersEndpoint' has been autodetected for JMX exposure
+[2m2018-06-09 21:42:22.395[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'refreshScope' has been autodetected for JMX exposure
+[2m2018-06-09 21:42:22.403[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+[2m2018-06-09 21:42:22.433[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'routesEndpoint': registering with JMX server as MBean [org.springframework.cloud.netflix.zuul:name=routesEndpoint,type=RoutesEndpoint]
+[2m2018-06-09 21:42:22.440[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with key 'routesEndpoint' has been registered as an MBean but has no exposed attributes or operations
+[2m2018-06-09 21:42:22.447[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'routesMvcEndpoint': registering with JMX server as MBean [org.springframework.cloud.netflix.zuul:name=routesMvcEndpoint,type=RoutesMvcEndpoint]
+[2m2018-06-09 21:42:22.460[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+[2m2018-06-09 21:42:22.469[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'filtersEndpoint': registering with JMX server as MBean [org.springframework.cloud.netflix.zuul:name=filtersEndpoint,type=FiltersEndpoint]
+[2m2018-06-09 21:42:22.471[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with key 'filtersEndpoint' has been registered as an MBean but has no exposed attributes or operations
+[2m2018-06-09 21:42:22.473[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+[2m2018-06-09 21:42:22.493[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=29ca3d04,type=ConfigurationPropertiesRebinder]
+[2m2018-06-09 21:42:22.501[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+[2m2018-06-09 21:42:22.697[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.support.DefaultLifecycleProcessor [0;39m [2m:[0;39m Starting beans in phase 0
+[2m2018-06-09 21:42:22.720[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.n.eureka.InstanceInfoFactory      [0;39m [2m:[0;39m Setting initial instance status as: STARTING
+[2m2018-06-09 21:42:22.869[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Initializing Eureka in region us-east-1
+[2m2018-06-09 21:42:23.196[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using JSON encoding codec LegacyJacksonJson
+[2m2018-06-09 21:42:23.196[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using JSON decoding codec LegacyJacksonJson
+[2m2018-06-09 21:42:23.766[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using XML encoding codec XStreamXml
+[2m2018-06-09 21:42:23.766[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using XML decoding codec XStreamXml
+[2m2018-06-09 21:42:24.534[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2018-06-09 21:42:24.652[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Disable delta property : false
+[2m2018-06-09 21:42:24.652[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Single vip registry refresh property : null
+[2m2018-06-09 21:42:24.652[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Force full registry fetch : false
+[2m2018-06-09 21:42:24.652[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application is null : false
+[2m2018-06-09 21:42:24.652[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Registered Applications size is zero : true
+[2m2018-06-09 21:42:24.652[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application version is -1: true
+[2m2018-06-09 21:42:24.652[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[2m2018-06-09 21:42:25.181[0;39m [31mERROR[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.s.t.d.RedirectingEurekaHttpClient [0;39m [2m:[0;39m Request execution error
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplications(AbstractJerseyEurekaHttpClient.java:165) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1022) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:936) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:412) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:267) [eureka-client-1.7.0.jar:1.7.0]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:61) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:261) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$e2cf7e0c.CGLIB$eurekaClient$0(<generated>) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$e2cf7e0c$$FastClassBySpringCGLIB$$8a134593.invoke(<generated>) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$e2cf7e0c.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$2.getObject(AbstractBeanFactory.java:345) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:379) [spring-cloud-context-1.3.0.RELEASE.jar:1.3.0.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:181) [spring-cloud-context-1.3.0.RELEASE.jar:1.3.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) [spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:166) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:155) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:56) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:37) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:80) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:175) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:50) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:348) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:151) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:114) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:880) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:144) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at com.example.apigateway.ZuulGatewayApplication.main(ZuulGatewayApplication.java:12) [main/:na]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_172]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_172]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_172]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_172]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_172]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_172]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 68 common frames omitted
+
+[2m2018-06-09 21:42:25.182[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.s.t.d.RetryableEurekaHttpClient   [0;39m [2m:[0;39m Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+[2m2018-06-09 21:42:25.189[0;39m [31mERROR[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_API-GATEWAY/295cb1114ec9:api-gateway - was unable to refresh its cache! status = Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1022) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:936) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:412) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:267) [eureka-client-1.7.0.jar:1.7.0]
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:61) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:261) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$e2cf7e0c.CGLIB$eurekaClient$0(<generated>) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$e2cf7e0c$$FastClassBySpringCGLIB$$8a134593.invoke(<generated>) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) [spring-core-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:358) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration$$EnhancerBySpringCGLIB$$e2cf7e0c.eurekaClient(<generated>) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1173) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1067) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$2.getObject(AbstractBeanFactory.java:345) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:379) [spring-cloud-context-1.3.0.RELEASE.jar:1.3.0.RELEASE]
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:181) [spring-cloud-context-1.3.0.RELEASE.jar:1.3.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:340) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35) [spring-aop-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:166) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:155) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:56) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:37) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:80) [spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:175) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:50) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:348) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:151) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:114) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:880) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:144) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at com.example.apigateway.ZuulGatewayApplication.main(ZuulGatewayApplication.java:12) [main/:na]
+
+[2m2018-06-09 21:42:25.193[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Using default backup registry implementation which does not do anything.
+[2m2018-06-09 21:42:25.217[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Starting heartbeat executor: renew interval is: 30
+[2m2018-06-09 21:42:25.242[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.discovery.InstanceInfoReplicator    [0;39m [2m:[0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2m2018-06-09 21:42:25.277[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Discovery Client initialized at timestamp 1528580545261 with initial instances count: 0
+[2m2018-06-09 21:42:25.597[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.n.e.s.EurekaServiceRegistry       [0;39m [2m:[0;39m Registering application api-gateway with eureka with status UP
+[2m2018-06-09 21:42:25.602[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Saw local status change event StatusChangeEvent [timestamp=1528580545602, current=UP, previous=STARTING]
+[2m2018-06-09 21:42:25.609[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_API-GATEWAY/295cb1114ec9:api-gateway: registering service...
+[2m2018-06-09 21:42:25.688[0;39m [31mERROR[0;39m [35m81[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mc.n.d.s.t.d.RedirectingEurekaHttpClient [0;39m [2m:[0;39m Request execution error
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused (Connection refused)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:807) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.7.0.jar:1.7.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_172]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_172]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_172]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_172]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_172]
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_172]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_172]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_172]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_172]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_172]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_172]
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.3.jar:4.5.3]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.3.jar:4.5.3]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 30 common frames omitted
+
+[2m2018-06-09 21:42:25.689[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mc.n.d.s.t.d.RetryableEurekaHttpClient   [0;39m [2m:[0;39m Request execution failed with message: java.net.ConnectException: Connection refused (Connection refused)
+[2m2018-06-09 21:42:25.689[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_API-GATEWAY/295cb1114ec9:api-gateway - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:807) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) [eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.7.0.jar:1.7.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_172]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_172]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_172]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_172]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_172]
+
+[2m2018-06-09 21:42:25.690[0;39m [33m WARN[0;39m [35m81[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mc.n.discovery.InstanceInfoReplicator    [0;39m [2m:[0;39m There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:807) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:104) ~[eureka-client-1.7.0.jar:1.7.0]
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:88) [eureka-client-1.7.0.jar:1.7.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_172]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_172]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_172]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_172]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_172]
+
+[2m2018-06-09 21:42:25.851[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.support.DefaultLifecycleProcessor [0;39m [2m:[0;39m Starting beans in phase 2147483647
+[2m2018-06-09 21:42:25.884[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mration$HystrixMetricsPollerConfiguration[0;39m [2m:[0;39m Starting poller
+[2m2018-06-09 21:42:26.097[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat started on port(s): 8080 (http)
+[2m2018-06-09 21:42:26.100[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.c.n.e.s.EurekaAutoServiceRegistration[0;39m [2m:[0;39m Updating port to 8080
+[2m2018-06-09 21:42:26.124[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.e.apigateway.ZuulGatewayApplication   [0;39m [2m:[0;39m Started ZuulGatewayApplication in 39.181 seconds (JVM running for 45.192)
+[2m2018-06-09 21:42:55.210[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Disable delta property : false
+[2m2018-06-09 21:42:55.210[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Single vip registry refresh property : null
+[2m2018-06-09 21:42:55.211[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Force full registry fetch : false
+[2m2018-06-09 21:42:55.211[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application is null : false
+[2m2018-06-09 21:42:55.211[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Registered Applications size is zero : true
+[2m2018-06-09 21:42:55.211[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application version is -1: true
+[2m2018-06-09 21:42:55.211[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[2m2018-06-09 21:42:55.681[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[tbeatExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_API-GATEWAY/295cb1114ec9:api-gateway - Re-registering apps/API-GATEWAY
+[2m2018-06-09 21:42:55.683[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[tbeatExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_API-GATEWAY/295cb1114ec9:api-gateway: registering service...
+[2m2018-06-09 21:42:55.690[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_API-GATEWAY/295cb1114ec9:api-gateway: registering service...
+[2m2018-06-09 21:42:55.752[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m The response status is 200
+[2m2018-06-09 21:42:56.079[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[tbeatExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_API-GATEWAY/295cb1114ec9:api-gateway - registration status: 204
+[2m2018-06-09 21:42:56.091[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_API-GATEWAY/295cb1114ec9:api-gateway - registration status: 204
+[2m2018-06-09 21:43:25.761[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Disable delta property : false
+[2m2018-06-09 21:43:25.761[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Single vip registry refresh property : null
+[2m2018-06-09 21:43:25.761[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Force full registry fetch : false
+[2m2018-06-09 21:43:25.761[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application is null : false
+[2m2018-06-09 21:43:25.761[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Registered Applications size is zero : true
+[2m2018-06-09 21:43:25.761[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application version is -1: false
+[2m2018-06-09 21:43:25.761[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[2m2018-06-09 21:43:25.819[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m The response status is 200
+[2m2018-06-09 21:47:24.668[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2018-06-10 02:03:04.248[0;39m [32m INFO[0;39m [35m81[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
