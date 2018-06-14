@@ -14,37 +14,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class WebsocketApi {
 
-	@Autowired
-	private CardRepository cardRepository;
-	@GetMapping("/")
-	public Iterable <Card> findAllCards(){
-		System.out.println("GET CARDS!");
-		return cardRepository.findAll();
-	}
-	//this route will create a new card for a user
-	@PostMapping("/")
-	public Card createNewCard(@RequestBody Card newCard){
-		System.out.println("POST TO CARD HIT");
-		return  cardRepository.save(newCard);
-	}
-	@DeleteMapping("/{cardId}")
-	public HttpStatus deleteCardById(@PathVariable Long cardId) {
-//        cardRepository.deleteById(cardId);
-		cardRepository.delete(cardId);
-
-		return HttpStatus.OK;
-	}
-	@PatchMapping("/{cardId}")
-	public Card updateCardById(@PathVariable Long cardId, @RequestBody Card cardRequest) {
-
-//        Card cardFromDb = cardRepository.findById(cardId).get();
-		Card cardFromDb = cardRepository.findOne(cardId);
-
-		cardFromDb.setCardId(cardRequest.getCardId());
-		cardFromDb.setDeckId(cardRequest.getDeckId());
-		cardFromDb.setUserId(cardRequest.getUserId());
-
-		return cardRepository.save(cardFromDb);
+	@RequestMapping("/")
+	public String home(){
+		return "Request mapping working";
 	}
 
 	public static void main(String[] args) {
